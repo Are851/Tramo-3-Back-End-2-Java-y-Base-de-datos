@@ -81,6 +81,7 @@ public static Comparator<Pelicula> compararDirector = new Comparator<Pelicula>()
         return p1.getDirector().compareTo(p2.getDirector());
     }
 };
+
     
     
 }

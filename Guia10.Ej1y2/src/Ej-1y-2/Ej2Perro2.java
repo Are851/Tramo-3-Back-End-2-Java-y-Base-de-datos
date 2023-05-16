@@ -1,7 +1,9 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+Continuando el ejercicio anterior, después de mostrar los perros, al usuario 
+se le pedirá un perro y se recorrerá la lista con un Iterator, se buscará el 
+perro en la lista.  Si el perro está en la lista, se eliminará el perro que 
+ingresó el usuario y se mostrará la lista ordenada. Si el perro no se encuentra
+en la lista, se le informará al usuario y se mostrará la lista ordenada. 
  */
 package guia10;
 
@@ -27,11 +29,11 @@ public class Ej2Perro2 {
 
         ArrayList< String> perro = new ArrayList<>(n);
         ///opcion 1
-//        for (String perro1 : perro) {
-//            System.out.println("Ingrese el nombre de la raza");
-//            raza = scanner.nextLine();
-//            perro.add(raza);
-//        }
+        for (String perro1 : perro) {
+            System.out.println("Ingrese el nombre de la raza");
+            raza = scanner.nextLine();
+            perro.add(raza);
+        }
         ///opcion 2
 //        for (int i = 0; i < perro.size(); i++) {
 //            System.out.println("Ingrese el nombre de la raza");
@@ -62,8 +64,7 @@ public class Ej2Perro2 {
 
         // Buscar y eliminar el perro
         while (it.hasNext()) {
-            raza = it.next();
-            if (raza.equalsIgnoreCase(perroeliminar)) {
+            if (it.next().equalsIgnoreCase(perroeliminar)) {
                 it.remove();
                 encontrado = true;
             }
