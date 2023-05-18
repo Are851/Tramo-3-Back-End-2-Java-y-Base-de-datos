@@ -60,12 +60,13 @@ public class Main {
                     System.out.println("¡Hasta luego!");
                     break;
                 default:
-                    System.out.println(         
-
+                    System.out.println("Ingrese una opcion valida");
             }
-        }
     }
+                    while(opcion>6 || opcion<1 );
+
     }
+}
 
 
 
