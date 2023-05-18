@@ -35,21 +35,23 @@ public class ServicioAlumnos {
     }
 
     public void crearAlumnos() {
-        Scanner scan = new Scanner(System.in);
+        Scanner scan1 = new Scanner(System.in);
 
         System.out.println("Ingrese nombre del alumno");
-        String nombre = scan.nextLine();
+        String nombre = scan1.nextLine();
+        
         ArrayList<Integer> notas = new ArrayList<>();
 
         for (int i = 0; i < 3; i++) {
             System.out.println("Ingrese nota");
-            int nota = scan.nextInt();
+            int nota = scan1.nextInt();
             notas.add(nota);
         }
-        scan.nextLine(); // Consumir la línea vacía después del input de la última nota
+        scan1.nextLine(); // Consumir la línea vacía después del input de la última nota
+        
         Alumnos alumno1 = new Alumnos(notas, nombre);
-        this.alumno.add(alumno1);
-        scan.close();
+        alumno.add(alumno1);
+        scan1.close();
 
     }
 
@@ -59,14 +61,13 @@ public class ServicioAlumnos {
             suma += nota;
         }
         return suma / notas.size();
-
     }
 
     public void calcularNota(String nombreBuscado) {
         boolean encontrado = false;
-        for (Alumnos alumnos : alumno) {
+        for (Alumnos listadealumnos : alumno) {
             if (alumnos.getNombre().equalsIgnoreCase(nombreBuscado)) {
-                double notaFinal = notaFinal(alumnos.getNotas());
+                double notaFinal = notaFinal(listadealumnos.getNotas());
 
                 System.out.println("La nota final de" + nombreBuscado + "es" + notaFinal);
                 encontrado = true;
