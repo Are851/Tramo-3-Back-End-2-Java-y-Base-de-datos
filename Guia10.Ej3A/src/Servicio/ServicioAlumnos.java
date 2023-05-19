@@ -24,6 +24,7 @@ import java.util.ArrayList;
 public class ServicioAlumnos {
 
     Scanner scan = new Scanner(System.in);
+    Alumnos alumnos1 =new Alumnos();
 
     private ArrayList<Alumnos> alumno;
 
@@ -66,7 +67,7 @@ public class ServicioAlumnos {
     public void calcularNota(String nombreBuscado) {
         boolean encontrado = false;
         for (Alumnos listadealumnos : alumno) {
-            if (alumnos.getNombre().equalsIgnoreCase(nombreBuscado)) {
+            if (alumnos1.getNombre().equalsIgnoreCase(nombreBuscado)) {
                 double notaFinal = notaFinal(listadealumnos.getNotas());
 
                 System.out.println("La nota final de" + nombreBuscado + "es" + notaFinal);

@@ -28,7 +28,7 @@ import java.util.Comparator;
 public class Pelicula {
     private String titulo;
     private String director;
-    private int duracion;
+    private Integer duracion;
 
     public Pelicula() {
     }
@@ -53,20 +53,34 @@ public class Pelicula {
         this.director = director;
     }
 
-    public int getDuracion() {
+    public Integer getDuracion() {
         return duracion;
     }
 
-    public void setDuracion(int duracion) {
+    public void setDuracion(Integer duracion) {
         this.duracion = duracion;
     }
     
+//    public static Comparator<Pelicula> compararDuracion = new Comparator<Pelicula>() {
+//    @Override
+//    public int compare(Pelicula p1, Pelicula p2) {
+//        return p1.getDuracion() -p2.getDuracion();
+    ///Este metodo en caso que declares jnt la duracion
+//    }
+//};
+//public static Comparator<Pelicula> compararDuracion = new Comparator<Pelicula>() {
+//        @Override
+//        public int compare(Pelicula p1, Pelicula p2) {
+//            return Integer.compare(p1.getDuracion(), p2.getDuracion()); // ascendente
+///Este metodo en caso que declares jnt la duracion
+//        }
+//    };
     public static Comparator<Pelicula> compararDuracion = new Comparator<Pelicula>() {
-    @Override
-    public int compare(Pelicula p1, Pelicula p2) {
-        return p1.getDuracion() - p2.getDuracion();
-    }
-};
+        @Override
+        public int compare(Pelicula p1, Pelicula p2) {
+            return p1.getDuracion().compareTo(p2.getDuracion());
+        }
+    };
 
 public static Comparator<Pelicula> compararTitulo = new Comparator<Pelicula>() {
     @Override
@@ -74,6 +88,7 @@ public static Comparator<Pelicula> compararTitulo = new Comparator<Pelicula>() {
         return p1.getTitulo().compareTo(p2.getTitulo());
     }
 };
+
 
 public static Comparator<Pelicula> compararDirector = new Comparator<Pelicula>() {
     @Override

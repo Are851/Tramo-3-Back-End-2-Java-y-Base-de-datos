@@ -52,8 +52,7 @@ public class PeliculaServicio {
     }
 
     public void ordenarDuracionMayor(ArrayList<Pelicula> peliculas) {
-        peliculas.sort(Pelicula.compararDuracion);
-        Collections.reverse(peliculas);
+        peliculas.sort(Pelicula.compararDuracion.reversed());
         mostrarPeliculas(peliculas);
     }
 

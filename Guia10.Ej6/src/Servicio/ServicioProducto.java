@@ -14,10 +14,11 @@ package Servicio;
  * @author RobAre
  */
 import Entidad.Producto;
-    import java.util.HashMap;
+import java.util.HashMap;
 import java.util.Map;
 
 public class ServicioProducto {
+
     private Map<String, Producto> productos;
 
     public ServicioProducto() {
@@ -25,15 +26,15 @@ public class ServicioProducto {
     }
 
     public void agregarProducto(String nombre, double precio) {
-        Producto producto = new Producto(nombre, precio);
-        productos.put(nombre, producto);
+        Producto producto1 = new Producto(nombre, precio);
+        productos.put(nombre, producto1);
         System.out.println("Producto agregado exitosamente.");
     }
 
     public void modificarPrecio(String nombre, double nuevoPrecio) {
         if (productos.containsKey(nombre)) {
-            Producto producto = productos.get(nombre);
-            producto.setPrecio(nuevoPrecio);
+            Producto producto1 = productos.get(nombre);
+            producto1.setPrecio(nuevoPrecio);
             System.out.println("Precio modificado exitosamente.");
         } else {
             System.out.println("El producto no existe en el inventario.");
@@ -51,10 +52,9 @@ public class ServicioProducto {
 
     public void mostrarProductos() {
         System.out.println("=== Productos en inventario ===");
-        for (Producto producto : productos.values()) {
-            System.out.println(producto);
+        for (Producto producto1 : productos.values()) {
+            System.out.println(producto1);
         }
         System.out.println("===============================");
     }
 }
-
