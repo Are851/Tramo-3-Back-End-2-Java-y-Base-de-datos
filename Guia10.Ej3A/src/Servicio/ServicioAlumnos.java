@@ -23,20 +23,12 @@ import java.util.ArrayList;
  */
 public class ServicioAlumnos {
 
-    Scanner scan = new Scanner(System.in);
-    Alumnos alumnos1 =new Alumnos();
-
+    Scanner scan1 = new Scanner(System.in);
     private ArrayList<Alumnos> alumno;
 
-    public ServicioAlumnos() {
-    }
 
-    public ServicioAlumnos(ArrayList<Alumnos> alumno) {
-        this.alumno = alumno;
-    }
 
     public void crearAlumnos() {
-        Scanner scan1 = new Scanner(System.in);
 
         System.out.println("Ingrese nombre del alumno");
         String nombre = scan1.nextLine();
@@ -50,8 +42,8 @@ public class ServicioAlumnos {
         }
         scan1.nextLine(); // Consumir la línea vacía después del input de la última nota
         
-        Alumnos alumno1 = new Alumnos(notas, nombre);
-        alumno.add(alumno1);
+        Alumnos alumno2 = new Alumnos(notas, nombre);
+        alumno.add(alumno2);
         scan1.close();
 
     }
@@ -65,6 +57,8 @@ public class ServicioAlumnos {
     }
 
     public void calcularNota(String nombreBuscado) {
+        Alumnos alumnos1 =new Alumnos();
+
         boolean encontrado = false;
         for (Alumnos listadealumnos : alumno) {
             if (alumnos1.getNombre().equalsIgnoreCase(nombreBuscado)) {
