@@ -29,7 +29,7 @@ ha podido realizar la operación y false en caso contrario.
 • Método toString para mostrar los datos de los libros. 
 
  */
-package guia10.extra.ej3;
+package guia10;
 
 import Entidad.Libro;
 import Servicio.ServicioLibreria;
