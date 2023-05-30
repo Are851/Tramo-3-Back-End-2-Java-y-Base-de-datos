@@ -75,12 +75,15 @@ public class Pelicula {
 ///Este metodo en caso que declares jnt la duracion
 //        }
 //    };
-    public static Comparator<Pelicula> compararDuracion = new Comparator<Pelicula>() {
-        @Override
-        public int compare(Pelicula p1, Pelicula p2) {
-            return p1.getDuracion().compareTo(p2.getDuracion());
-        }
-    };
+/// COmparator comun
+//        public static Comparator<Pelicula> compararDuracion = new Comparator<Pelicula>() {
+//        @Override
+//        public int compare(Pelicula p1, Pelicula p2) {
+//            return p1.getDuracion().compareTo(p2.getDuracion());
+//        }
+//    };
+    ///comparator LAMBDA
+    public static Comparator<Pelicula> compararDuracion = (Pelicula p1, Pelicula p2) -> p1.getDuracion().compareTo(p2.getDuracion());
 
 public static Comparator<Pelicula> compararTitulo = new Comparator<Pelicula>() {
     @Override
