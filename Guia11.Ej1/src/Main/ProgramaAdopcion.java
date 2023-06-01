@@ -55,14 +55,6 @@ public class ProgramaAdopcion {
 
     public static void mostrarInformacionPersona(Persona persona) {
         System.out.println(persona.toString());
-       
-        if (persona.perro != null) {
-            System.out.println("--- Información del Perro ---");
-            System.out.println(persona.perro.toString());
-
-        } else {
-            System.out.println("No se ha asignado ningún perro a esta persona.");
-        }
     }
 
     private static class AdopcionService {
