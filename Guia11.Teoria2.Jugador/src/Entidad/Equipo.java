@@ -10,22 +10,29 @@ package Entidad;
  * @author Robert Are "BlackDragon" <https://github.com/Are851>
  */
 import java.util.ArrayList;
+import java.util.List;
 
-public class Equipo {
-    private final ArrayList<Jugador> jugadores;
+class Equipo {
+    private List<Jugador> jugadores;
 
-public Equipo() {
-    this.jugadores = new ArrayList<>();
-}
+    public Equipo() {
+        jugadores = new ArrayList<>();
+    }
 
 
-    public ArrayList<Jugador> getJugadores() {
+    public Equipo(List<Jugador> jugadores) {
+        jugadores = new ArrayList<>();
+    }
+
+    public List<Jugador> getJugadores() {
         return jugadores;
     }
 
-    @Override
-    public String toString() {
-        return super.toString(); //To change body of generated methods, choose Tools | Templates.
+    public void setJugadores(List<Jugador> jugadores) {
+        this.jugadores = jugadores;
     }
 
+    public void agregarJugador(Jugador jugador) {
+        jugadores.add(jugador);
+    }
 }

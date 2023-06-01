@@ -19,6 +19,7 @@ public class ServiciosEquipos {
 
     Scanner leer = new Scanner(System.in).useDelimiter("\\n");
     List<Jugador> jugadores = new ArrayList<>();
+    Equipo equipo=new Equipo();
 
     public void crearJugador() {
         String confirmacion;
