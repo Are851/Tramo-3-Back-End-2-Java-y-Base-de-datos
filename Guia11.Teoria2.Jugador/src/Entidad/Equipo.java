@@ -12,17 +12,20 @@ package Entidad;
 import java.util.ArrayList;
 
 public class Equipo {
-    private ArrayList<Jugador> jugadores;
+    private final ArrayList<Jugador> jugadores;
 
-    public Equipo(String nombre) {
-        this.jugadores = new ArrayList<>();
-    }
+public Equipo() {
+    this.jugadores = new ArrayList<>();
+}
+
 
     public ArrayList<Jugador> getJugadores() {
         return jugadores;
     }
 
-    public void agregarJugador(Jugador jugador) {
-        jugadores.add(jugador);
+    @Override
+    public String toString() {
+        return super.toString(); //To change body of generated methods, choose Tools | Templates.
     }
+
 }

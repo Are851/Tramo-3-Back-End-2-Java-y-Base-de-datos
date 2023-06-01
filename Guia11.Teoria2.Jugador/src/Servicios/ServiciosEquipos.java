@@ -11,12 +11,14 @@ package Servicios;
  */
 import Entidad.Equipo;
 import Entidad.Jugador;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class ServiciosEquipos {
 
     Scanner leer = new Scanner(System.in).useDelimiter("\\n");
-    Equipo equipo;
+    List<Jugador> jugadores = new ArrayList<>();
 
     public void crearJugador() {
         String confirmacion;
@@ -37,7 +39,7 @@ public class ServiciosEquipos {
             System.out.print("Ingrese Numero: ");
             jugador.setNumero(leer.nextInt());
 
-            equipo.agregarJugador(jugador);
+            jugadores.add(jugador);
             System.out.print("Para salir oprima (S): ");
             confirmacion = leer.next();
 
@@ -45,7 +47,7 @@ public class ServiciosEquipos {
     }
 
     public void mostrar() {
-        for (Jugador jugador : equipo.getJugadores()) {
+        for (Jugador jugador : jugadores) {
             System.out.println(jugador);
         }
     }

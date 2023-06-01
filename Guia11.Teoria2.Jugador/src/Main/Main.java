@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package guia11.teoria2;
+package Main;
 
 import Servicios.ServiciosEquipos;
 
@@ -17,7 +17,6 @@ public class Main {
     public static void main(String[] args) {
 
         ServiciosEquipos se1 = new ServiciosEquipos();
-
         se1.crearJugador();
         se1.mostrar();
     }

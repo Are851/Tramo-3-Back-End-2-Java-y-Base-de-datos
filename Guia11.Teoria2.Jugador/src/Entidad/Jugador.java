@@ -57,5 +57,14 @@ public class Jugador {
         this.numero = numero;
     }
 
+    @Override
+    public String toString() {
+        return "Jugador{" +
+                "nombre='" + nombre + '\'' +
+                ", apellido='" + apellido + '\'' +
+                ", posicion='" + posicion + '\'' +
+                ", numero=" + numero +
+                '}';
+    }
 
 }
