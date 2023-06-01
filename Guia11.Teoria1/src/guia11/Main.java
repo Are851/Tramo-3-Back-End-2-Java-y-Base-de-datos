@@ -24,7 +24,6 @@ public class Main {
         p1.getDni().setNumero(22824814);
         p1.getDni().setLetra('A');
         
-
         System.out.println(p1.getNombre() + p1.getApellido() + p1.getDni().getLetra() + p1.getDni().getNumero());
         
     }
