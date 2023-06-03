@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package guia11ejercicioextra2b;
+package Main;
 
 import Entidad.Cine;
 import Entidad.Espectador;
