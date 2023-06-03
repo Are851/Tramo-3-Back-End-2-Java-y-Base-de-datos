@@ -1,14 +1,19 @@
-//nombre, edad y el dinero que tiene disponible.
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package Entidad;
 
+/**
+ *
+ * @author Robert Are "BlackDragon" <https://github.com/Are851>
+ */
 public class Espectador {
-
+   
     private String nombre;
     private int edad;
     private double dinero;
-
-    public Espectador() {
-    }
 
     public Espectador(String nombre, int edad, double dinero) {
         this.nombre = nombre;
@@ -40,4 +45,13 @@ public class Espectador {
         this.dinero = dinero;
     }
 
+    // Getters y setters
+    // ...
+
+    @Override
+    public String toString() {
+        return "Espectador: " + nombre + " | Edad: " + edad + " | Dinero disponible: $" + dinero;
+    }
 }
+ 
+
