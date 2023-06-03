@@ -9,7 +9,6 @@ package Servicios;
  *
  * @author Robert Are "BlackDragon" <https://github.com/Are851>
  */
-import Entidad.Equipo;
 import Entidad.Jugador;
 import java.util.ArrayList;
 import java.util.List;
@@ -19,7 +18,6 @@ public class ServiciosEquipos {
 
     Scanner leer = new Scanner(System.in).useDelimiter("\\n");
     List<Jugador> jugadores = new ArrayList<>();
-    Equipo equipo=new Equipo();
 
     public void crearJugador() {
         String confirmacion;
