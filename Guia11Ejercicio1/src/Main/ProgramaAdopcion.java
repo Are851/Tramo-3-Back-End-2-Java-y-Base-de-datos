@@ -57,7 +57,7 @@ public class ProgramaAdopcion {
         System.out.println(persona.toString());
     }
 
-    private static class AdopcionService {
+    public static class AdopcionService {
 
         public void adoptarPerro(Persona persona, Perro perro) {
         persona.perro = perro;

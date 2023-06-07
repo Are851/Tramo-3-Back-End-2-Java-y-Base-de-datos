@@ -3,18 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Servicio;
+package Main;
 
 import Entidad.Perro;
 import Entidad.Persona;
 
 /**
  *
- * @author RobAre
+ * @author Robert Are "BlackDragon" <https://github.com/Are851>
  */
 public class AdopcionService {
-    
-    public void adoptarPerro(Persona persona, Perro perro) {
+     public void adoptarPerro(Persona persona, Perro perro) {
         persona.perro = perro;
     }
 }
