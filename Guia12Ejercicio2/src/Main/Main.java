@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package guia12ejercicio2;
+package Main;
 
 import Entidad.Lavadora;
 import Entidad.Televisor;
