@@ -11,6 +11,7 @@ import Entidad.Televisor;
 /**
  *
  * @author Robert Are "BlackDragon" <https://github.com/Are851>
+ *  <https://www.linkedin.com/in/robert-arevalo-2438a9277/>
  */
 public class Main {
     public static void main(String[] args) {
