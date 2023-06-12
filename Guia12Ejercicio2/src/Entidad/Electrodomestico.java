@@ -75,19 +75,21 @@ Vamos a crear una Lavadora y un Televisor y llamar a los métodos necesarios
 para mostrar el precio final de los dos electrodomésticos.
  */
 package Entidad;
-
 /**
  *
  * @author Robert Are "BlackDragon" <https://github.com/Are851>
  * <https://www.linkedin.com/in/robert-arevalo-2438a9277/>
  */
 
+import java.util.Scanner;
 public class Electrodomestico {
     private double precio;
     private String color;
     private char consumoEnergetico;
     private double peso;
 
+Scanner sc = new Scanner(System.in);
+    
     public Electrodomestico() {
         this.precio = 1000;
         this.color = "blanco";
@@ -97,7 +99,7 @@ public class Electrodomestico {
 
     public Electrodomestico(double precio, String color, char consumoEnergetico, double peso) {
         this.precio = precio;
-        this.color = comprobarColor(color);
+        this.color = comprobarColor(color); 
         this.consumoEnergetico = comprobarConsumoEnergetico(consumoEnergetico);
         this.peso = peso;
     }
@@ -154,6 +156,13 @@ public class Electrodomestico {
     }
 
     public void crearElectrodomestico() {
+        System.out.println("Ingrese Color");   
+        comprobarColor(sc.nextLine());
+        System.out.println("Ingrese consumoEnergetico entre A, B, C, D, E y F");   
+        consumoEnergetico=  sc.next().charAt(0);
+        System.out.println("Ingrese Peso");   
+        peso = sc.nextInt();
+        
         // Solicitar información al usuario y llenar los atributos del electrodoméstico
         // Aquí puedes implementar tu código para solicitar los datos al usuario
     }
@@ -194,6 +203,9 @@ public class Electrodomestico {
 
         return precioFinal;
     }
+
+    
+    
 }
 
 

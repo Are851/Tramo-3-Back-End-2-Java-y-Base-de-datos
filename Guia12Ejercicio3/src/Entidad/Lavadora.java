@@ -5,40 +5,45 @@
  */
 package Entidad;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Robert Are "BlackDragon" <https://github.com/Are851>
- *  <https://www.linkedin.com/in/robert-arevalo-2438a9277/>
+ * <https://www.linkedin.com/in/robert-arevalo-2438a9277/>
  */
 public class Lavadora extends Electrodomestico {
-    private double carga;
+
+    private int carga;
 
     public Lavadora() {
         super();
-        this.carga = 5;
+        this.carga = 0;
     }
 
-    public Lavadora(double precio, String color, char consumoEnergetico, double peso, double carga) {
+    public Lavadora(int carga, double precio, String color, char consumoEnergetico, double peso) {
         super(precio, color, consumoEnergetico, peso);
         this.carga = carga;
-    }
-
-    public Lavadora(int i, String gris, char c, int i0) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     public double getCarga() {
         return carga;
     }
 
-    public void setCarga(double carga) {
+    public void setCarga(int carga) {
         this.carga = carga;
     }
 
     public void crearLavadora() {
         crearElectrodomestico();
-        // Solicitar información adicional al usuario y llenar el atributo carga
-        // Aquí puedes implementar tu código para solicitar los datos al usuario
+
+//        Scanner sc = new Scanner(System.in);
+//
+//        System.out.println("Ingrese la carga de la lavadora: ");
+//        String cargaStr = sc.nextLine();
+//        carga = Integer.parseInt(cargaStr);
+//
+//        sc.close();
     }
 
     @Override
@@ -51,8 +56,4 @@ public class Lavadora extends Electrodomestico {
 
         return precioFinal;
     }
-
-
-    
 }
-
