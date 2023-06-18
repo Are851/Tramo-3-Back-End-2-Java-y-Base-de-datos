@@ -1,3 +1,9 @@
+Queres bajar a tu computadora este repositorio?
+1.-Elegi la carpeta donde queres bajar.
+2.-Seleccionar la carpeta en la terminal 
+3.-Poner este comando en la terminal:
+git clone https://github.com/Are851/Tramo-3-Back-End-2-Java-y-Base-de-datos.git
+
 # Tramo-3-Back-End-2-Java-y-Base-de-datos
 Tramo-3-Back-End-2-Java-y-Base-de-datos
 ● Módulo 1 - Colecciones: Definición y características - Listas - Clase Collections.
