@@ -19,7 +19,9 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
         Lavadora lavadora = new Lavadora();
-
+        for(lav in lavadora){
+        };
+        
 
         ArrayList<Electrodomestico> electrodomesticos = new ArrayList<>();
         electrodomesticos.add(new Lavadora(40, 1500, "Blanco", 'B', 50));
