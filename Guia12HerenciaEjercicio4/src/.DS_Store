@@ -1,0 +1,72 @@
+/*
+3. Siguiendo el ejercicio anterior, en el main vamos a crear un ArrayList de Electrodomésticos
+para guardar 4 electrodomésticos, ya sean lavadoras o televisores, con valores ya asignados.
+Luego, recorrer este array y ejecutar el método precioFinal() en cada electrodoméstico. Se
+deberá también mostrar el precio de cada tipo de objeto, es decir, el precio de todos los
+televisores y el de las lavadoras. Una vez hecho eso, también deberemos mostrar, la suma del
+precio de todos los Electrodomésticos. Por ejemplo, si tenemos una lavadora con un precio de
+2000 y un televisor de 5000, el resultado final será de 7000 (2000+5000) para
+electrodomésticos, 2000 para lavadora y 5000 para televisor.
+ */
+package guia12teoriaej03;
+
+import guia12teoriaej03.Entidades.Electrodomesticos;
+import guia12teoriaej03.Entidades.Lavadora;
+import guia12teoriaej03.Entidades.Televisor;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Guia12TeoriaEj03 {
+
+    public static void main(String[] args) {
+        Scanner leer = new Scanner(System.in).useDelimiter("\n");
+        ArrayList<Electrodomesticos> electrodomesticosArrayList = new ArrayList<>();
+        char tipoElectrodomestico;
+        char aux;
+
+        for (int i = 1; i < 3; i++) {
+            aux = ' ';
+            do {
+                System.out.println("Ingrese electrodomestico Nº " + i + ", Lavadora(L) o Televisor(T)");
+                tipoElectrodomestico = leer.next().charAt(0);
+                aux = Character.toUpperCase(tipoElectrodomestico);
+            } while (aux != 'L' && aux != 'T');
+            if (aux == 'L') {
+                Lavadora l1 = new Lavadora();
+                l1.crearLavadora();
+                l1.precioFinal();
+                electrodomesticosArrayList.add(l1);
+            } else {
+                Televisor t1 = new Televisor();
+                t1.crearTelevisor();
+                t1.precioFinal();
+                electrodomesticosArrayList.add(t1);
+            }
+        }
+        double sumaLavadora = 0;
+        double sumaTelevisor = 0;
+        for (Electrodomesticos seleccionar : electrodomesticosArrayList) {
+
+            if (seleccionar instanceof Lavadora) {
+                Lavadora object = (Lavadora) seleccionar;
+                object.precioFinal();
+                sumaLavadora += object.getPrecio();
+                System.out.println(object.toString());
+            }
+
+            if (seleccionar instanceof Televisor) {
+                Televisor object = (Televisor) seleccionar;
+                object.precioFinal();
+                sumaTelevisor += object.getPrecio();
+                System.out.println(object.toString());
+            }
+
+        }
+        System.out.println("La suma de las lavadora es: " + sumaLavadora);
+        System.out.println("La suma de las televisores es: " + sumaTelevisor);
+
+//        for (Electrodomesticos mostrar : electrodomesticosArrayList) {
+//            System.out.println(mostrar.getPrecio());
+//        }
+    }
+}
