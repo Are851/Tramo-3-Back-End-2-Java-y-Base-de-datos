@@ -23,7 +23,7 @@ public class Velero extends Barco {
 
     @Override
     public double calcularModulo() {
-        return super.calcularModulo() + numMastiles;
+        return calcularModulo() + numMastiles;
     }
 
     // Getters y setters omitidos por brevedad

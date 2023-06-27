@@ -23,7 +23,7 @@ public class BarcoAMotor extends Barco {
 
     @Override
     public double calcularModulo() {
-        return super.calcularModulo() + potenciaCV;
+        return calcularModulo() + potenciaCV;
     }
 
     // Getters y setters omitidos por brevedad
