@@ -12,11 +12,23 @@ package Respuestas;
  */
 public class Repuestas {
     /*
+    class A {
+public void metodoA() {
+sentencia_a1
+sentencia_a2
+try {
+sentencia_a3
+sentencia_a4
+} catch (MioException e){
+sentencia_a6
+}
+sentencia_a5
+}
+}
 a) ¿Qué sentencias y en qué orden se ejecutan si se produce la excepción 
     MioException?
 Si se produce la excepción MioException, las sentencias se ejecutan en el 
 siguiente orden:
-
 sentencia_a1: Se ejecuta normalmente.
 sentencia_a2: Se ejecuta normalmente.
 sentencia_a3: Se ejecuta normalmente hasta que se lanza la excepción MioException.
