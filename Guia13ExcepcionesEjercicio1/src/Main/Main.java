@@ -30,6 +30,10 @@ en su peso ideal y cuantos, por encima, y también calcularemos un porcentaje
 de cuantos son mayores de edad y cuantos menores. Para esto, podemos crear 
 unos métodos adicionales.
 ================================================================================
+//Inicializar un objeto de la clase Persona ejercicio 3 de la guía Servicios, a 
+null y tratar de invocar el //método esMayorDeEdad() a través de ese objeto. 
+Luego, englobe el código con una cláusula try-catch para probar la nueva 
+excepción que debe ser controlada.
  */
 package Main;
 
@@ -42,9 +46,7 @@ package Main;
 import entidad.Persona;
 import java.util.Scanner;
 import servicio.PersonaServicio;
-//Inicializar un objeto de la clase Persona ejercicio 3 de la guía Servicios, a null y tratar de invocar el
-//método esMayorDeEdad() a través de ese objeto. Luego, englobe el código con una cláusula
-//try-catch para probar la nueva excepción que debe ser controlada.
+
 
 public class Main {
 
