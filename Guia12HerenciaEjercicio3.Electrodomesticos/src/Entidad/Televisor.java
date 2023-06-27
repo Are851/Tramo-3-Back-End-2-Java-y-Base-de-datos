@@ -6,17 +6,12 @@
 package Guia12Ejercicio3;
 
 import Entidad.Electrodomestico;
-import java.util.Scanner;
 
 /**
  *
  * @author Robert Are "BlackDragon" <https://github.com/Are851>
  *   <https://www.linkedin.com/in/robert-arevalo-2438a9277/>
  */    
-
-
-
-
 
 public class Televisor extends Electrodomestico {
     private double resolucion;
@@ -52,16 +47,6 @@ public class Televisor extends Electrodomestico {
 
     public void crearTelevisor() {
         crearElectrodomestico();
-
-//        Scanner sc = new Scanner(System.in);
-//
-//        System.out.println("Ingrese la resolución del televisor (en pulgadas): ");
-//        resolucion=sc.nextDouble();
-//
-//        System.out.println("¿Tiene sintonizador TDT incorporado? (true/false): ");
-//        sintonizadorTDT=sc.nextBoolean();
-//
-//        sc.close();
     }
 
     @Override

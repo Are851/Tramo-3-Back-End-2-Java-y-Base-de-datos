@@ -5,15 +5,12 @@
  */
 package Entidad;
 
-import java.util.Scanner;
-
 /**
  *
  * @author Robert Are "BlackDragon" <https://github.com/Are851>
  * <https://www.linkedin.com/in/robert-arevalo-2438a9277/>
  */
 public class Lavadora extends Electrodomestico {
-
     private int carga;
 
     public Lavadora() {
@@ -26,7 +23,7 @@ public class Lavadora extends Electrodomestico {
         this.carga = carga;
     }
 
-    public double getCarga() {
+    public int getCarga() {
         return carga;
     }
 
@@ -36,14 +33,6 @@ public class Lavadora extends Electrodomestico {
 
     public void crearLavadora() {
         crearElectrodomestico();
-
-//        Scanner sc = new Scanner(System.in);
-//
-//        System.out.println("Ingrese la carga de la lavadora: ");
-//        String cargaStr = sc.nextLine();
-//        carga = Integer.parseInt(cargaStr);
-//
-//        sc.close();
     }
 
     @Override
