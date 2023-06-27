@@ -43,7 +43,7 @@ public class Main {
             int resultado = DivisionNumero.dividirNumeros(num1, num2);
             System.out.println("El resultado de la división es: " + resultado);
         } catch (NumberFormatException e) {
-            System.out.println("Error: La entrada no es un número válido.");
+            System.out.println("No válido: La entrada no es un número válido.");
         } catch (ArithmeticException e) {
             System.out.println("No se puede dividir por cero.");
         } catch (Exception e) {
