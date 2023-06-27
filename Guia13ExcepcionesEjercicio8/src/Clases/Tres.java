@@ -42,3 +42,10 @@ public class Tres {
         }
     }
 }
+/** Resultado
+run:
+Valor final del try: 44
+Valor final del finally: 45
+Valor antes del return: 46
+46
+ */
