@@ -4,23 +4,20 @@
  * and open the template in the editor.
  */
 package Main;
-
-import Entidad.Electrodomestico;
-import Entidad.Lavadora;
-import Guia12Ejercicio3.Televisor;
-import java.util.ArrayList;
-
 /**
  *
  * @author Robert Are "BlackDragon" <https://github.com/Are851>
  *   <https://www.linkedin.com/in/robert-arevalo-2438a9277/>
  */
 
+
+import Entidad.Electrodomestico;
+import Entidad.Lavadora;
+import Entidad.Televisor;
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
-        Lavadora lavadora = new Lavadora();
-
-
         ArrayList<Electrodomestico> electrodomesticos = new ArrayList<>();
         electrodomesticos.add(new Lavadora(40, 1500, "Blanco", 'B', 50));
         electrodomesticos.add(new Televisor(50, true, 3000, "Negro", 'A', 30));
@@ -41,12 +38,12 @@ public class Main {
                 precioTelevisores += precioFinal;
             }
         }
+
         for (Electrodomestico electrodomestico : electrodomesticos) {
-            System.out.println("Color "+electrodomestico.getColor()+
-                    " ConsumoEnergetico "+
-                    electrodomestico.getConsumoEnergetico()+" Peso "
-                    +electrodomestico.getPeso()+" precioFinal "+electrodomestico.precioFinal());
-            
+            System.out.println("Color: " + electrodomestico.getColor() +
+                    ", Consumo Energetico: " + electrodomestico.getConsumoEnergetico() +
+                    ", Peso: " + electrodomestico.getPeso() +
+                    ", Precio Final: " + electrodomestico.precioFinal());
         }
 
         System.out.println("Precio de las lavadoras: " + precioLavadoras);

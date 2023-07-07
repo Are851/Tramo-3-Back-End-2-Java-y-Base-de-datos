@@ -10,14 +10,14 @@ Electrodomésticos. Por ejemplo, si tenemos una lavadora con un precio de 2000
 y un televisor de 5000, el resultado final será de 7000 (2000+5000)
  */
 package Entidad;
-
-import java.util.Scanner;
-
 /**
  *
  * @author Robert Are "BlackDragon" <https://github.com/Are851>
  *   <https://www.linkedin.com/in/robert-arevalo-2438a9277/>
  */
+
+import java.util.Scanner;
+
 public class Electrodomestico {
     private double precio;
     private String color;
@@ -83,7 +83,7 @@ public class Electrodomestico {
         String colorValido = color.toLowerCase();
 
         for (String c : coloresDisponibles) {
-            if (colorValido.equals(c.toLowerCase())) {
+            if (colorValido.equalsIgnoreCase(c)) {
                 return c;
             }
         }
@@ -109,25 +109,18 @@ public class Electrodomestico {
     public double precioFinal() {
         double precioFinal = precio;
 
-        switch (consumoEnergetico) {
-            case 'A':
-                precioFinal += 1000;
-                break;
-            case 'B':
-                precioFinal += 800;
-                break;
-            case 'C':
-                precioFinal += 600;
-                break;
-            case 'D':
-                precioFinal += 500;
-                break;
-            case 'E':
-                precioFinal += 300;
-                break;
-            case 'F':
-                precioFinal += 100;
-                break;
+        if (consumoEnergetico == 'A') {
+            precioFinal += 1000;
+        } else if (consumoEnergetico == 'B') {
+            precioFinal += 800;
+        } else if (consumoEnergetico == 'C') {
+            precioFinal += 600;
+        } else if (consumoEnergetico == 'D') {
+            precioFinal += 500;
+        } else if (consumoEnergetico == 'E') {
+            precioFinal += 300;
+        } else if (consumoEnergetico == 'F') {
+            precioFinal += 100;
         }
 
         if (peso >= 1 && peso <= 19) {
@@ -143,3 +136,4 @@ public class Electrodomestico {
         return precioFinal;
     }
 }
+
