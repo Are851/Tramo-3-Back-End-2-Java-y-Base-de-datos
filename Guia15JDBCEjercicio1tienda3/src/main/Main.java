@@ -24,7 +24,7 @@ import Servicios.ProductoServicio;
 //f) Ingresar un producto a la base de datos.
 //g) Ingresar un fabricante a la base de datos
 //h) Editar un producto con datos a elección.
-public class JDBC {
+public class Main {
 
     public static void main(String[] args) throws Exception {
         ProductoServicio productoServicio = new ProductoServicio();

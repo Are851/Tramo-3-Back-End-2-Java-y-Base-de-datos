@@ -127,7 +127,8 @@ public class ProductoDAO extends DAO {
                     + " WHERE codigo=" + producto.getCodigo();
             insertarModificarEliminar(sql);
         } catch (SQLIntegrityConstraintViolationException e) {
-            System.out.println("Error: El fabricante con el código " + producto.getCodigoFabricante() + " no existe.");
+            System.out.println("Error: El fabricante con el código " + 
+            producto.getCodigoFabricante() + " no existe.");
         } catch (Exception e) {
             e.printStackTrace();
         }
