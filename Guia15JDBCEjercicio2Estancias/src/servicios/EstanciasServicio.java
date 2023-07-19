@@ -14,24 +14,29 @@ package servicios;
 import Persistencia.EstanciasDAO;
 import entidades.Estancias;
 import java.util.ArrayList;
+import java.util.List;
 
 public class EstanciasServicio {
 
     private EstanciasDAO estanciasDAO;
 
     public EstanciasServicio() {
-        estanciasDAO = new EstanciasDAO();
+        estanciasDAO  = new EstanciasDAO();
     }
 
-    public ArrayList<Estancias> listarEstancias() {
+    public void listarEstancias(String opc) {
         try {
-            return estanciasDAO.listarEstancias();
-        } catch (Exception e) {
+          EstanciasDAO estanciasDAO1 = new EstanciasDAO();
+
+          List<Estancias> estancias = estanciasDAO1.listarEstancias(opc);   
+        
+             for (Estancias aux : estancias) {
+             System.out.println(aux.toString());
+        } }catch (Exception e) {
             System.out.println("ERROR al listar estancias: " + e.getMessage());
-            return new ArrayList<>();
         }
     }
-
+   
     public void agregarEstancia(Estancias estancia) {
         try {
             estanciasDAO.agregarEstancia(estancia);

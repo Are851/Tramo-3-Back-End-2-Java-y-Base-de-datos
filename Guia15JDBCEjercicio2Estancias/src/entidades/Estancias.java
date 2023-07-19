@@ -13,7 +13,7 @@ import java.time.LocalDate;
  */
 public class Estancias {
 
-    private int id_estancia;
+    int id_estancia;
     private int id_cliente, id_casa;
     private String nombre_huesped;
     private LocalDate fecha_desde;
@@ -81,7 +81,8 @@ public class Estancias {
 
     @Override
     public String toString() {
-        return "estancias{" + "id_estancia=" + id_estancia + ", id_cliente=" + id_cliente + ", id_casa=" + id_casa + ", nombre_huesped=" + nombre_huesped + ", fecha_desde=" + fecha_desde + ", fecha_hasta=" + fecha_hasta + '}';
-    }
+        return "Estancias{" + "\nid_estancia=" + id_estancia + "\nidv_cliente="
+        + id_cliente + "\nid_casa=" + id_casa + "\nnombre_huesped=" + nombre_huesped + 
+        "\nfecha_desde=" + fecha_desde + ", fecha_hasta=" + fecha_hasta + '\n';
     
-    }
+}}    

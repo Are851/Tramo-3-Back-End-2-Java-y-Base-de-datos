@@ -84,12 +84,13 @@ public class EstanciasMain {
 //e) Listar los datos de todos los clientes que en algún momento realizaron una estancia y la 
 //descripción de la casa donde la realizaron.
                     case "e":
-                        clienteS.listarClientes();
+                        System.out.println(clienteS.listarClientes());
+                        estanciasS.listarEstancias(opc);
                         break;
 //f) Listar todas las estancias que han sido reservadas por un cliente, 
 ////mostrar el nombre, país y ciudad del cliente y además la información
                     case "f":
-                        estanciasS.listarEstancias();
+                        estanciasS.listarEstancias(opc);
                         break;
 //g) Debido a la devaluación de la libra esterlina con respecto al euro se desea incrementar el 
 //precio por día en un 5% de todas las casas del Reino Unido. Mostar los precios 

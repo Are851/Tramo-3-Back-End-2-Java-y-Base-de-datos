@@ -18,20 +18,27 @@ package Persistencia;
 //    SELECT c.*, ca.descripcion FROM clientes c INNER JOIN estancias e ON c.id_cliente = e.id_cliente INNER JOIN casas ca ON e.id_casa = ca.id_casa;
 //     */
 
+import entidades.Casas;
+import entidades.Estancias;
 import entidades.clientes;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class ClienteDAO extends DAO {
 
     public ArrayList<clientes> listarClientes() throws Exception {
         ArrayList<clientes> listaClientes = new ArrayList<>();
-        String query = "SELECT * FROM clientes";
+        String query = "SELECT c.*, e.nombre_huesped, e.fecha_desde, e.fecha_hasta, casa.*\n" +
+"FROM clientes c\n" +
+"INNER JOIN estancias e ON c.id_cliente = e.id_cliente\n" +
+"INNER JOIN casas casa ON e.id_casa = casa.id_casa";
         try {
             consultarBase(query);
             while (resultado.next()) {
-                clientes cliente = new clientes();
+                clientes cliente = new clientes(); 
+                Estancias estancia = new Estancias();
                 cliente.setId_cliente(resultado.getInt("id_cliente"));
                 cliente.setNumero(resultado.getInt("numero"));
                 cliente.setNombre(resultado.getString("nombre"));
@@ -40,6 +47,10 @@ public class ClienteDAO extends DAO {
                 cliente.setCiudad(resultado.getString("ciudad"));
                 cliente.setPais(resultado.getString("pais"));
                 cliente.setEmail(resultado.getString("email"));
+                estancia.setNombre_huesped(resultado.getString("nombre_huesped"));
+                estancia.setFecha_desde(resultado.getDate("fecha_desde").toLocalDate());
+                estancia.setFecha_hasta(resultado.getDate("fecha_hasta").toLocalDate());
+             
                 listaClientes.add(cliente);
             }
         } finally {

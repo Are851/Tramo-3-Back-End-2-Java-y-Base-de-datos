@@ -95,8 +95,9 @@ public class clientes {
 
     @Override
     public String toString() {
-        return "clientes{" + "id_cliente=" + id_cliente + ", numero=" + numero + ", nombre=" + nombre + ", calle=" + calle + ", codigo_postal=" + codigo_postal + ", ciudad=" + ciudad + ", pais=" + pais + ", email=" + email + '}';
+        return "\nClientes" + "\nid_cliente=" + id_cliente + ", \nnumero=" + numero +
+    "\nnombre=" + nombre + "\ncalle=" + calle + "\ncodigo_postal=" 
+    + codigo_postal + "\nciudad=" + ciudad + "\npais=" + pais
+    + "\nemail=" + email +  + '\n';
     }
-    
-
 }
