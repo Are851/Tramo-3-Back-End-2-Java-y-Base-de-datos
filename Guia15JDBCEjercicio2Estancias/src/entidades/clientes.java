@@ -96,7 +96,7 @@ public class clientes {
     @Override
     public String toString() {
         return "\nClientes" + "\nid_cliente=" + id_cliente + ", \nnumero=" + numero +
-    "\nnombre=" + nombre + "\ncalle=" + calle + "\ncodigo_postal=" 
+    "\nnombret=" + nombre + "\ncalle=" + calle + "\ncodigo_postal=" 
     + codigo_postal + "\nciudad=" + ciudad + "\npais=" + pais
     + "\nemail=" + email +  + '\n';
     }

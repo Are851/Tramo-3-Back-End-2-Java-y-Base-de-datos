@@ -84,8 +84,10 @@ public class EstanciasMain {
 //e) Listar los datos de todos los clientes que en algún momento realizaron una estancia y la 
 //descripción de la casa donde la realizaron.
                     case "e":
-                        System.out.println(clienteS.listarClientes());
-                        estanciasS.listarEstancias(opc);
+                        
+                        
+//                        System.out.println(clienteS.listarClientes());
+//                        estanciasS.listarEstancias(opc);
                         break;
 //f) Listar todas las estancias que han sido reservadas por un cliente, 
 ////mostrar el nombre, país y ciudad del cliente y además la información
