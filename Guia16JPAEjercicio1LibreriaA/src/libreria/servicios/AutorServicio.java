@@ -96,4 +96,8 @@ public class AutorServicio {
         System.out.println("Autor no encontrado");
         return null;
     }
+ public List<Autor> mostrarAutores() {
+        // Aquí puedes agregar lógica adicional si es necesario antes de llamar al método del DAO
+        return dao.mostrarautores();
+    }    
 }

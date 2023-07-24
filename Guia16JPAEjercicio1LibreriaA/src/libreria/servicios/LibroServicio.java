@@ -333,4 +333,9 @@ public class LibroServicio {
     public List<Libro> buscarLibroEditorial(String editorial) {
         return dao.consultaGenerica("Libro", "editorial.nombre", editorial);
     }
+    
+    public List<Libro> consultarLibro(){
+        return dao.consultaLibros();
+    }    
+    
 }

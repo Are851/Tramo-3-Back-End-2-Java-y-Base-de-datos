@@ -84,4 +84,7 @@ public class EditorialServicio {
             leer.next();
         }
     }
+    public List<Editorial> consultarEditorial(){
+        return dao.consultarEditorial();
+    }    
 }

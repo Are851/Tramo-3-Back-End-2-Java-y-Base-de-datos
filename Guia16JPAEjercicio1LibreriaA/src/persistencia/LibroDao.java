@@ -21,11 +21,11 @@ public class LibroDao extends DAO {
         return query.getResultList();
     }
 
-    public List consultaLibros() {
+    public List<Libro> consultaLibros() {
         String jpql = "SELECT l FROM Libro l";
-        return em.createQuery(jpql).getResultList();
+        return em.createQuery(jpql,Libro.class).getResultList();
     }
-
+ 
     public Libro buscarPorIsbn(long id) {
         return em.find(Libro.class, id);
     }

@@ -27,4 +27,9 @@ public class EditorialDAO extends DAO {
                 .setParameter("nombre", nombre)
                 .getResultList();
     }
-}
+    
+    protected void borrarEntidad(Editorial object) {
+        super.borrarEntidad(object); //To change body of generated methods, choose Tools | Templates.
+    }
+
+ }

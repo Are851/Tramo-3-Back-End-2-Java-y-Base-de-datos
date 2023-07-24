@@ -27,4 +27,8 @@ public class AutorDAO extends DAO {
                 .setParameter("nombre", nombre)
                 .getResultList();
     }
+    public List<Autor> mostrarautores() {
+        String jpql = "SELECT a FROM Autor a"; // Se debe incluir un alias para la entidad "Autor" (en este caso, "a").
+        return em.createQuery(jpql, Autor.class).getResultList(); // Corregir el final de la consulta y la llamada a getResultList().
+    }
 }

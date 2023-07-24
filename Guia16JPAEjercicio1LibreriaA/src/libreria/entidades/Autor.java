@@ -41,7 +41,7 @@ public class Autor implements Serializable {
 
     @Override
     public String toString() {
-        return "Autor{" + "id=" + id + ", nombre=" + nombre + ", alta=" + alta + '}';
+        return "\n"+ "\nAutor{" + "id=" + id + ", nombre=" + nombre + ", alta=" + alta + '}';
     }
 
 }

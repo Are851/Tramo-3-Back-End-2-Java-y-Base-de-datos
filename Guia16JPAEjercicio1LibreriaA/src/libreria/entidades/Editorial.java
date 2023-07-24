@@ -1,6 +1,7 @@
 package libreria.entidades;
 
 import java.io.Serializable;
+import java.util.List;
 import javax.persistence.*;
 
 @Entity
@@ -41,7 +42,8 @@ public class Editorial implements Serializable {
 
     @Override
     public String toString() {
-        return "Editorial{" + "id=" + id + ", nombre=" + nombre + ", alta=" + alta + '}';
+        return "\n"+ "\nEditorial{" + "id=" + id + ", nombre=" + nombre + 
+                ", alta=" + alta + '}';
     }
 
 }
