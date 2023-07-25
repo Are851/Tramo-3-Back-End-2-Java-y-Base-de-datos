@@ -143,7 +143,7 @@ public class Main {
         LibroServicio ls = new LibroServicio();
         ClienteServicio cs = new ClienteServicio();
         PrestamoServicio ps = new PrestamoServicio();
-        DAO  dao=new DAO();
+
         boolean menu = true;
         do {
             System.out.println("\n");
@@ -158,7 +158,23 @@ public class Main {
             System.out.println("9. Lista de autores,clientes, editoriales y libros");
             System.out.println("10. Salir");
 
-            int opcion = leer.nextInt();
+        int opcion= leer.nextInt();
+        boolean numeroValido = true;
+
+        do {
+            try {
+                System.out.println("Ingresa un número entre 1 y 10:");
+                opcion = leer.nextInt();
+                if (opcion >= 1 && opcion <= 10) {
+                    numeroValido = false; // Salir del bucle si el número es válido
+                } else {
+                    System.out.println("El número debe estar entre 1 y 10. Intenta nuevamente.");
+                }
+            } catch (java.util.InputMismatchException e) {
+                System.out.println("Error: Debes ingresar un número entero válido. Intenta nuevamente.");
+                leer.nextLine(); // Consumir la entrada no válida para evitar un bucle infinito
+            }
+        } while (numeroValido);
 
             switch (opcion) {
                 case 1:
