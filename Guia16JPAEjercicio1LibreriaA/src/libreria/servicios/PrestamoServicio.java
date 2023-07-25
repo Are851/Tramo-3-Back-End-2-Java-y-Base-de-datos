@@ -173,4 +173,8 @@ public class PrestamoServicio {
             }
         }
     }
+    
+    public List<Prestamo> consultarPrestamo(){
+        return dao.consultaPrestamo();
+    }   
 }

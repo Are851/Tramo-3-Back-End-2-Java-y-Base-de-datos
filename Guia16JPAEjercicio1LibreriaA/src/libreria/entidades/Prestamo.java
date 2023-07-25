@@ -71,4 +71,20 @@ public class Prestamo implements Serializable {
         this.fechaFin = fechaFin;
     }
 
+    public Prestamo(Integer id, Libro libro, Cliente cliente, Date fechaInicio, Date fechaFin) {
+        this.id = id;
+        this.libro = libro;
+        this.cliente = cliente;
+        this.fechaInicio = fechaInicio;
+        this.fechaFin = fechaFin;
+    }
+
+    @Override
+    public String toString() {
+        return "Prestamo{" + "id=" + id + ", libro=" + libro + ", cliente=" + cliente + 
+        ", fechaInicio=" + fechaInicio + ", fechaFin=" + fechaFin + '}';
+    }
+
+    
+   
 }

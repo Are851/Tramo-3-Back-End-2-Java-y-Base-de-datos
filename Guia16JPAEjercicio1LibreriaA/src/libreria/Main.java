@@ -155,7 +155,7 @@ public class Main {
             System.out.println("6. Buscar libro/s por nombre de Autor");
             System.out.println("7. Buscar libro/s por nombre de Editorial");
             System.out.println("8. Prestar libro");
-            System.out.println("9. Lista de autores,editoriales y libros");
+            System.out.println("9. Lista de autores,clientes, editoriales y libros");
             System.out.println("10. Salir");
 
             int opcion = leer.nextInt();
@@ -216,10 +216,14 @@ public class Main {
                     ls.buscarLibroEditorial();
                     break;
                 case 8:
+                    System.out.println(ls.consultarLibro());
+                    ps.consultarPrestamo();
+                    System.out.println(cs.consultarCliente());
                     ps.prestamoLibro();
                     break;
                     case 9:
                     System.out.println(as.mostrarAutores());
+                    System.out.println(cs.consultarCliente());
                     System.out.println(ls.consultarLibro());
                     es.consultarEditorial();
                     break;

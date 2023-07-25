@@ -28,4 +28,8 @@ public class ClienteDao extends DAO {
 
     }
 
+    public List<Cliente> consultaCliente() {
+        String jpql = "SELECT c FROM Cliente c";
+        return em.createQuery(jpql,Cliente.class).getResultList();
+    }
 }

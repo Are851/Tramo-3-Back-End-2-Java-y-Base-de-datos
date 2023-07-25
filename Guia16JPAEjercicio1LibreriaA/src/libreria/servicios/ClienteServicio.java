@@ -1,5 +1,6 @@
 package libreria.servicios;
 
+import java.util.List;
 import java.util.Scanner;
 import libreria.entidades.Cliente;
 import persistencia.ClienteDao;
@@ -38,4 +39,7 @@ public class ClienteServicio {
         return cliente;
     }
 
+        public List<Cliente> consultarCliente(){
+        return cd.consultaCliente();
+    }   
 }

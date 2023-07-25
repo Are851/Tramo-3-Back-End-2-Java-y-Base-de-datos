@@ -38,5 +38,10 @@ public class PrestamoDao extends DAO {
                     .getResultList();
         }
     }
+    public List<Prestamo> consultaPrestamo() {
+        String jpql = "SELECT p FROM Prestamo p";
+        return em.createQuery(jpql,Prestamo.class).getResultList();
+    }
+    
 
 }
