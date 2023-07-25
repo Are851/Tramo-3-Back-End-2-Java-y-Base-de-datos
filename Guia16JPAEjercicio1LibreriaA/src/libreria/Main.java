@@ -91,7 +91,6 @@ agregar las entidades a la unidad de persistencia.
 a) Entidades
 Crearemos el siguiente modelo de entidades:
 Entidad Cliente
-22
 La entidad cliente modela los clientes (a quienes se les presta libros) de la biblioteca. Se
 almacenan los datos personales y de contacto de ese cliente.
 Entidad Préstamo
