@@ -151,15 +151,15 @@ public class Main {
         boolean menu = true;
         do {
             System.out.println("\n");
-            System.out.println("1. Agregar autor, editorial, o libro.");
-            System.out.println("2. Dar de alta/baja o editar autor, editorial, o libro.");
-            System.out.println("3. Buscar Autor por nombre");
-            System.out.println("4. Buscar libro por ISBN");
-            System.out.println("5. Buscar libro por Título");
-            System.out.println("6. Buscar libro/s por nombre de Autor");
-            System.out.println("7. Buscar libro/s por nombre de Editorial");
-            System.out.println("8. Prestar libro");
-            System.out.println("9. Lista de autores");
+            System.out.println("1.  Agregar autor, editorial, o libro.");
+            System.out.println("2.  Dar de alta/baja o editar autor, editorial, o libro.");
+            System.out.println("3.  Buscar Autor por nombre");
+            System.out.println("4.  Buscar libro por ISBN");
+            System.out.println("5.  Buscar libro por Título");
+            System.out.println("6.  Buscar libro/s por nombre de Autor");
+            System.out.println("7.  Buscar libro/s por nombre de Editorial");
+            System.out.println("8.  Prestar libro");
+            System.out.println("9.  Lista de autores");
             System.out.println("10. Lista de clientes");
             System.out.println("11. Lista de editoriales");
             System.out.println("12. Lista de prestamos");
