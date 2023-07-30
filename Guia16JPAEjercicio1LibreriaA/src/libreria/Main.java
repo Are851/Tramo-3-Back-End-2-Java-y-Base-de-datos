@@ -165,7 +165,9 @@ public class Main {
             System.out.println("12. Lista de prestamos");
             System.out.println("13. Lista de libros");
             System.out.println("14. Buscar Prestamos realizados por un cliente");
-            System.out.println("15. Salir");
+            System.out.println("15. Buscar si un cliente esta cargado y lo crea si no esta"
+                    + "cargado");
+            System.out.println("16. Salir");
 
             System.out.println("Ingresa un número entre 1 y 15:");
 
@@ -174,7 +176,7 @@ public class Main {
 
             do {
                 try {
-                    if (opcion >= 1 && opcion <= 15) {
+                    if (opcion >= 1 && opcion <= 16) {
                         numeroValido = false; // Salir del bucle si el número es válido
                     } else {
                         System.out.println("El número debe estar entre 1 y 11. Intenta nuevamente.");
@@ -258,7 +260,7 @@ public class Main {
                     break;
                 case 12:
                     System.out.println(ps.consultarPrestamo());
-                    break; 
+                    break;
                 case 13:
                     System.out.println(ls.consultarLibro());
                     break;
@@ -283,6 +285,25 @@ public class Main {
                     }
                     break;
                 case 15:
+                    ClienteServicio clienteServicio = new ClienteServicio();
+                    // Pedir al usuario que ingrese el nombre del cliente a buscar
+                    Scanner scanner = new Scanner(System.in);
+                    System.out.println("Ingrese el nombre del cliente que quiere buscar:");
+                    String nombreCliente1 = scanner.nextLine();
+
+                    // Buscar el cliente por su nombre utilizando el servicio
+                    Cliente clienteEncontrado1 = clienteServicio.buscarClientePorNombre(nombreCliente1);
+
+                    if (clienteEncontrado1 == null) {
+                        System.out.println("No se encontró ningún cliente con el nombre ingresado.");
+                        cs.crearCliente();
+                    } else {
+                        // Aquí puedes utilizar el objeto "clienteEncontrado" como desees
+                        System.out.println("Cliente encontrado: " + clienteEncontrado1.getNombre());
+                        System.out.println("DNI del cliente: " + clienteEncontrado1.getDocumento());
+                        // ... Puedes mostrar otros detalles del cliente si lo deseas ...
+                    }
+                case 16:
                     menu = false;
                     System.out.println("Gracias por usar mi programa!");
                     break;

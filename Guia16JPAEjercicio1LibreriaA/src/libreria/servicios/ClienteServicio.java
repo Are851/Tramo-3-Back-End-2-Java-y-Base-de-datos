@@ -1,13 +1,9 @@
 package libreria.servicios;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 import libreria.entidades.Cliente;
-import libreria.entidades.Prestamo;
-import static libreria.entidades.Prestamo_.cliente;
 import persistencia.ClienteDao;
-import persistencia.PrestamoDao;
 
 public class ClienteServicio {
 
@@ -48,10 +44,6 @@ public class ClienteServicio {
     }   
         
 private ClienteDao clienteDao;
-
-    public ClienteServicio() {
-        clienteDao = new ClienteDao();
-    }
 
    public Cliente buscarClientePorNombre(String nombreCliente) {
         List<Cliente> clientes = clienteDao.consultaCliente(); // Obtener la lista de clientes desde la base de datos
