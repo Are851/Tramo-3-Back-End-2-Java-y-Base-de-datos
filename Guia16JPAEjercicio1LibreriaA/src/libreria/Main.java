@@ -159,18 +159,22 @@ public class Main {
             System.out.println("6. Buscar libro/s por nombre de Autor");
             System.out.println("7. Buscar libro/s por nombre de Editorial");
             System.out.println("8. Prestar libro");
-            System.out.println("9. Lista de autores,clientes, editoriales, prestamos y libros");
-            System.out.println("10. Buscar Prestamos realizados por un cliente");
-            System.out.println("11. Salir");
+            System.out.println("9. Lista de autores");
+            System.out.println("10. Lista de clientes");
+            System.out.println("11. Lista de editoriales");
+            System.out.println("12. Lista de prestamos");
+            System.out.println("13. Lista de libros");
+            System.out.println("14. Buscar Prestamos realizados por un cliente");
+            System.out.println("15. Salir");
 
-            System.out.println("Ingresa un número entre 1 y 11:");
+            System.out.println("Ingresa un número entre 1 y 15:");
 
             int opcion = leer.nextInt();
             boolean numeroValido = true;
 
             do {
                 try {
-                    if (opcion >= 1 && opcion <= 12) {
+                    if (opcion >= 1 && opcion <= 15) {
                         numeroValido = false; // Salir del bucle si el número es válido
                     } else {
                         System.out.println("El número debe estar entre 1 y 11. Intenta nuevamente.");
@@ -245,14 +249,21 @@ public class Main {
                     break;
                 case 9:
                     System.out.println(as.mostrarAutores());
-                    System.out.println(cs.consultarCliente());
-                    System.out.println(ls.consultarLibro());
-                    System.out.println(es.consultarEditorial());
-                    System.out.println(ps.consultarPrestamo());
                     break;
                 case 10:
                     System.out.println(cs.consultarCliente());
-                    
+                    break;
+                case 11:
+                    System.out.println(es.consultarEditorial());
+                    break;
+                case 12:
+                    System.out.println(ps.consultarPrestamo());
+                    break; 
+                case 13:
+                    System.out.println(ls.consultarLibro());
+                    break;
+                case 14:
+                    System.out.println(cs.consultarCliente());
                     // Mostrar detalles de préstamos de un cliente
                     System.out.println("Ingrese el nombre del cliente que quiere buscar:");
                     String nombreCliente = leer.next();
@@ -271,24 +282,7 @@ public class Main {
                         ps.mostrarDetallesPrestamos(prestamosCliente);
                     }
                     break;
-//                    System.out.println(cs.consultarCliente());
-//
-//                    System.out.println("Ingrese el nombre del cliente que quiere buscar:");
-//                    String nombreCliente = leer.next();
-//
-//// Buscar el cliente por su nombre utilizando el servicio
-//                    Cliente clienteEncontrado = cs.buscarClientePorNombre(nombreCliente);
-//
-//                    if (clienteEncontrado == null) {
-//                        System.out.println("No se encontró ningún cliente con el nombre ingresado.");
-//                    } else {
-//                        // Aquí puedes utilizar el objeto "clienteEncontrado" como desees
-//                        System.out.println("Cliente encontrado: " + clienteEncontrado.getNombre());
-//                    }
-//                    
-//                    
-//                    break;
-                case 11:
+                case 15:
                     menu = false;
                     System.out.println("Gracias por usar mi programa!");
                     break;
