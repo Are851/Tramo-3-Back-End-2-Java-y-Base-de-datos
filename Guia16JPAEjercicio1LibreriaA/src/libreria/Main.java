@@ -252,7 +252,7 @@ public class Main {
                     break;
                 case 10:
                     System.out.println(cs.consultarCliente());
-
+                    
                     // Mostrar detalles de préstamos de un cliente
                     System.out.println("Ingrese el nombre del cliente que quiere buscar:");
                     String nombreCliente = leer.next();
@@ -271,7 +271,6 @@ public class Main {
                         ps.mostrarDetallesPrestamos(prestamosCliente);
                     }
                     break;
-
 //                    System.out.println(cs.consultarCliente());
 //
 //                    System.out.println("Ingrese el nombre del cliente que quiere buscar:");
