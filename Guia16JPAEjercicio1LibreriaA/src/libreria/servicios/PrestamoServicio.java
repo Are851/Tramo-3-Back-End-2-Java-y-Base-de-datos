@@ -1,9 +1,12 @@
 package libreria.servicios;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
+import javax.persistence.EntityManager;
+import javax.persistence.TypedQuery;
 import libreria.entidades.Cliente;
 import libreria.entidades.Libro;
 import libreria.entidades.Prestamo;
@@ -173,8 +176,27 @@ public class PrestamoServicio {
             }
         }
     }
-    
+  
     public List<Prestamo> consultarPrestamo(){
         return dao.consultaPrestamo();
     }   
-}
+   public List<Prestamo> buscarPrestamosPorCliente(Cliente cliente) {
+        return dao.buscarPrestamosPorCliente(cliente);
+    }
+   public static void mostrarDetallesPrestamos(List<Prestamo> prestamos) {
+        if (prestamos.isEmpty()) {
+            System.out.println("El cliente no tiene préstamos.");
+        } else {
+            System.out.println("Detalles de los préstamos del cliente:");
+            for (Prestamo prestamo : prestamos) {
+                System.out.println("ID del préstamo: " + prestamo.getId());
+                System.out.println("Fecha del préstamo: " + prestamo.getFechaInicio());
+                System.out.println("Fecha de devolución: " + prestamo.getFechaFin());
+                System.out.println("Libro prestado: " + prestamo.getLibro().getTitulo());
+                System.out.println("-----------------------------");
+            }
+            }}}
+
+
+
+

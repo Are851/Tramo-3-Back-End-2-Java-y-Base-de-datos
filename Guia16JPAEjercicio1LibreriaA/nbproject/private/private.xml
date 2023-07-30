@@ -14,6 +14,22 @@
         <group>
             <file>file:/D:/Disco%20D/Programacion/2023/Programación/ArgPrograma/FullStackEgg/FullStackEgg/Etapa3JPA/Gestor%20de%20Libros%20-%20Ejercicio%201/src/libreria/Main.java</file>
         </group>
-        <group name="Java 3"/>
+        <group name="Java 3">
+            <file>file:/C:/Users/M/Documents/Tramo-3-Back-End-2-Java-y-Base-de-datos/Tramo-3-Back-End-2-Java-y-Base-de-datos/Guia16JPAEjercicio1LibreriaA/src/libreria/entidades/Autor.java</file>
+            <file>file:/C:/Users/M/Documents/Tramo-3-Back-End-2-Java-y-Base-de-datos/Tramo-3-Back-End-2-Java-y-Base-de-datos/Guia16JPAEjercicio1LibreriaA/src/libreria/servicios/AutorServicio.java</file>
+            <file>file:/C:/Users/M/Documents/Tramo-3-Back-End-2-Java-y-Base-de-datos/Tramo-3-Back-End-2-Java-y-Base-de-datos/Guia16JPAEjercicio1LibreriaA/src/persistencia/PrestamoDao.java</file>
+            <file>file:/C:/Users/M/Documents/Tramo-3-Back-End-2-Java-y-Base-de-datos/Tramo-3-Back-End-2-Java-y-Base-de-datos/Guia16JPAEjercicio1LibreriaA/src/libreria/entidades/Editorial.java</file>
+            <file>file:/C:/Users/M/Documents/Tramo-3-Back-End-2-Java-y-Base-de-datos/Tramo-3-Back-End-2-Java-y-Base-de-datos/Guia16JPAEjercicio1LibreriaA/src/persistencia/LibroDao.java</file>
+            <file>file:/C:/Users/M/Documents/Tramo-3-Back-End-2-Java-y-Base-de-datos/Tramo-3-Back-End-2-Java-y-Base-de-datos/Guia16JPAEjercicio1LibreriaA/src/persistencia/AutorDAO.java</file>
+            <file>file:/C:/Users/M/Documents/Tramo-3-Back-End-2-Java-y-Base-de-datos/Tramo-3-Back-End-2-Java-y-Base-de-datos/Guia16JPAEjercicio1LibreriaA/src/persistencia/ClienteDao.java</file>
+            <file>file:/C:/Users/M/Documents/Tramo-3-Back-End-2-Java-y-Base-de-datos/Tramo-3-Back-End-2-Java-y-Base-de-datos/Guia16JPAEjercicio1LibreriaA/src/libreria/servicios/LibroServicio.java</file>
+            <file>file:/C:/Users/M/Documents/Tramo-3-Back-End-2-Java-y-Base-de-datos/Tramo-3-Back-End-2-Java-y-Base-de-datos/Guia16JPAEjercicio1LibreriaA/src/persistencia/DAO.java</file>
+            <file>file:/C:/Users/M/Documents/Tramo-3-Back-End-2-Java-y-Base-de-datos/Tramo-3-Back-End-2-Java-y-Base-de-datos/Guia16JPAEjercicio1LibreriaA/src/libreria/entidades/Libro.java</file>
+            <file>file:/C:/Users/M/Documents/Tramo-3-Back-End-2-Java-y-Base-de-datos/Tramo-3-Back-End-2-Java-y-Base-de-datos/Guia16JPAEjercicio1LibreriaA/src/libreria/entidades/Prestamo.java</file>
+            <file>file:/C:/Users/M/Documents/Tramo-3-Back-End-2-Java-y-Base-de-datos/Tramo-3-Back-End-2-Java-y-Base-de-datos/Guia16JPAEjercicio1LibreriaA/src/libreria/entidades/Cliente.java</file>
+            <file>file:/C:/Users/M/Documents/Tramo-3-Back-End-2-Java-y-Base-de-datos/Tramo-3-Back-End-2-Java-y-Base-de-datos/Guia16JPAEjercicio1LibreriaA/src/libreria/servicios/PrestamoServicio.java</file>
+            <file>file:/C:/Users/M/Documents/Tramo-3-Back-End-2-Java-y-Base-de-datos/Tramo-3-Back-End-2-Java-y-Base-de-datos/Guia16JPAEjercicio1LibreriaA/src/libreria/Main.java</file>
+            <file>file:/C:/Users/M/Documents/Tramo-3-Back-End-2-Java-y-Base-de-datos/Tramo-3-Back-End-2-Java-y-Base-de-datos/Guia16JPAEjercicio1LibreriaA/src/libreria/servicios/ClienteServicio.java</file>
+        </group>
     </open-files>
 </project-private>

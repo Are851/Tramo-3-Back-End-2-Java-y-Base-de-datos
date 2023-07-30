@@ -1,4 +1,5 @@
 package libreria;
+
 /*
  1. Sistema de Guardado de una Librería
 El objetivo de este ejercicio es el desarrollo de un sistema de guardado de libros en JAVA
@@ -120,14 +121,17 @@ Al alumno le toca desarrollar, las siguientes funcionalidades:
 ejemplares de los que hay, ni devolver más de los que se encuentran prestados.
 No se podrán prestar libros con fecha anterior a la fecha actual, etc.
  */
+import java.util.List;
 import java.util.Scanner;
-import static javafx.scene.input.KeyCode.T;
+import libreria.entidades.Cliente;
+import libreria.entidades.Prestamo;
+import static libreria.entidades.Prestamo_.cliente;
 import libreria.servicios.AutorServicio;
 import libreria.servicios.ClienteServicio;
 import libreria.servicios.EditorialServicio;
 import libreria.servicios.LibroServicio;
 import libreria.servicios.PrestamoServicio;
-import persistencia.DAO;
+
 /**
  *
  * @author Rober Are  <https://github.com/Are851>
@@ -155,26 +159,27 @@ public class Main {
             System.out.println("6. Buscar libro/s por nombre de Autor");
             System.out.println("7. Buscar libro/s por nombre de Editorial");
             System.out.println("8. Prestar libro");
-            System.out.println("9. Lista de autores,clientes, editoriales y libros");
-            System.out.println("10. Salir");
+            System.out.println("9. Lista de autores,clientes, editoriales, prestamos y libros");
+            System.out.println("10. Buscar Prestamos realizados por un cliente");
+            System.out.println("11. Salir");
 
-        int opcion= leer.nextInt();
-        boolean numeroValido = true;
+            System.out.println("Ingresa un número entre 1 y 11:");
 
-        do {
-            try {
-                System.out.println("Ingresa un número entre 1 y 10:");
-                opcion = leer.nextInt();
-                if (opcion >= 1 && opcion <= 10) {
-                    numeroValido = false; // Salir del bucle si el número es válido
-                } else {
-                    System.out.println("El número debe estar entre 1 y 10. Intenta nuevamente.");
+            int opcion = leer.nextInt();
+            boolean numeroValido = true;
+
+            do {
+                try {
+                    if (opcion >= 1 && opcion <= 12) {
+                        numeroValido = false; // Salir del bucle si el número es válido
+                    } else {
+                        System.out.println("El número debe estar entre 1 y 11. Intenta nuevamente.");
+                    }
+                } catch (java.util.InputMismatchException e) {
+                    System.out.println("Error: Debes ingresar un número entero válido. Intenta nuevamente.");
+                    leer.nextLine(); // Consumir la entrada no válida para evitar un bucle infinito
                 }
-            } catch (java.util.InputMismatchException e) {
-                System.out.println("Error: Debes ingresar un número entero válido. Intenta nuevamente.");
-                leer.nextLine(); // Consumir la entrada no válida para evitar un bucle infinito
-            }
-        } while (numeroValido);
+            } while (numeroValido);
 
             switch (opcion) {
                 case 1:
@@ -236,14 +241,55 @@ public class Main {
                     ps.consultarPrestamo();
                     System.out.println(cs.consultarCliente());
                     ps.prestamoLibro();
+                    System.out.println(ps.consultarPrestamo());
                     break;
-                    case 9:
+                case 9:
                     System.out.println(as.mostrarAutores());
                     System.out.println(cs.consultarCliente());
                     System.out.println(ls.consultarLibro());
-                    es.consultarEditorial();
+                    System.out.println(es.consultarEditorial());
+                    System.out.println(ps.consultarPrestamo());
                     break;
                 case 10:
+                    System.out.println(cs.consultarCliente());
+
+                    // Mostrar detalles de préstamos de un cliente
+                    System.out.println("Ingrese el nombre del cliente que quiere buscar:");
+                    String nombreCliente = leer.next();
+
+                    // Buscar el cliente por su nombre utilizando el servicio
+                    Cliente clienteEncontrado = cs.buscarClientePorNombre(nombreCliente);
+
+                    if (clienteEncontrado == null) {
+                        System.out.println("No se encontró ningún cliente con el nombre ingresado.");
+                    } else {
+                        // Aquí puedes utilizar el objeto "clienteEncontrado" como desees
+                        System.out.println("Cliente encontrado: " + clienteEncontrado.getNombre());
+
+                        // Obtener y mostrar los detalles de los préstamos del cliente
+                        List<Prestamo> prestamosCliente = ps.buscarPrestamosPorCliente(clienteEncontrado);
+                        ps.mostrarDetallesPrestamos(prestamosCliente);
+                    }
+                    break;
+
+//                    System.out.println(cs.consultarCliente());
+//
+//                    System.out.println("Ingrese el nombre del cliente que quiere buscar:");
+//                    String nombreCliente = leer.next();
+//
+//// Buscar el cliente por su nombre utilizando el servicio
+//                    Cliente clienteEncontrado = cs.buscarClientePorNombre(nombreCliente);
+//
+//                    if (clienteEncontrado == null) {
+//                        System.out.println("No se encontró ningún cliente con el nombre ingresado.");
+//                    } else {
+//                        // Aquí puedes utilizar el objeto "clienteEncontrado" como desees
+//                        System.out.println("Cliente encontrado: " + clienteEncontrado.getNombre());
+//                    }
+//                    
+//                    
+//                    break;
+                case 11:
                     menu = false;
                     System.out.println("Gracias por usar mi programa!");
                     break;
@@ -254,7 +300,6 @@ public class Main {
         System.out.println("\n\n");
         System.out.println("*************** RA ***************");
         System.out.println("\n\n");
-
     }
 
 }

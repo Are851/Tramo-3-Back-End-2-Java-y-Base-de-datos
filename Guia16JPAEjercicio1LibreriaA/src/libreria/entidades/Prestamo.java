@@ -81,7 +81,7 @@ public class Prestamo implements Serializable {
 
     @Override
     public String toString() {
-        return "Prestamo{" + "id=" + id + ", libro=" + libro + ", cliente=" + cliente + 
+        return "\n"+"Prestamo{" + "id=" + id + ", libro=" + libro + ", cliente=" + cliente + 
         ", fechaInicio=" + fechaInicio + ", fechaFin=" + fechaFin + '}';
     }
 

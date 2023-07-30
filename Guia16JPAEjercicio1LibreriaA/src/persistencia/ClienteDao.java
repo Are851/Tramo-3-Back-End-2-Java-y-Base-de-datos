@@ -32,4 +32,10 @@ public class ClienteDao extends DAO {
         String jpql = "SELECT c FROM Cliente c";
         return em.createQuery(jpql,Cliente.class).getResultList();
     }
+     public List<Cliente> buscarPrestamosPorCliente(Cliente cliente) {
+        String jpql = "SELECT p FROM Prestamo p WHERE p.cliente = :cliente";
+        return em.createQuery(jpql, Cliente.class)
+                .setParameter("cliente", cliente)
+                .getResultList();
+    }
 }

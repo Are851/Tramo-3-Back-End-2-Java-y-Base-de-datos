@@ -1,13 +1,17 @@
 package libreria.servicios;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 import libreria.entidades.Cliente;
+import libreria.entidades.Prestamo;
+import static libreria.entidades.Prestamo_.cliente;
 import persistencia.ClienteDao;
+import persistencia.PrestamoDao;
 
 public class ClienteServicio {
 
-    private ClienteDao cd = new ClienteDao();
+     ClienteDao cd = new ClienteDao();
 
     public Cliente crearCliente() {
         Scanner leer = new Scanner(System.in).useDelimiter("\n");
@@ -42,4 +46,23 @@ public class ClienteServicio {
         public List<Cliente> consultarCliente(){
         return cd.consultaCliente();
     }   
+        
+private ClienteDao clienteDao;
+
+    public ClienteServicio() {
+        clienteDao = new ClienteDao();
+    }
+
+   public Cliente buscarClientePorNombre(String nombreCliente) {
+        List<Cliente> clientes = clienteDao.consultaCliente(); // Obtener la lista de clientes desde la base de datos
+
+        for (Cliente cliente : clientes) {
+            if (cliente.getNombre().equalsIgnoreCase(nombreCliente)) {
+                return cliente; // Retorna el objeto Cliente si se encuentra el nombre
+            }
+        }
+
+        return null; // Si no se encuentra el cliente, retorna null
+    }
 }
+
